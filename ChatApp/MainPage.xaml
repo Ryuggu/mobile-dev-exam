@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChatApp.MainPage"
+             BackgroundColor="#B00A0C">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="View API contacts" Clicked="APIContacts_Clicked"/>
+        <ToolbarItem Text="Add contact" Clicked="AddContacts_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="contactsListView" Margin="0, 8">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Label Text="{Binding Id}" TextColor="White" Margin="8,0,0,0"/>
+                        <Label Grid.Column="1" Text="{Binding FirstName}" TextColor="White" Margin="0,0,0,0"/>
+                        <Label Grid.Column="2" Text="{Binding LastName}" TextColor="White" Margin="8,0,8,0"/>
+                        <Label Grid.Column="3" Text="{Binding PhoneNumber}" TextColor="White" Margin="8,0,8,0"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+    
+</ContentPage>
+    
